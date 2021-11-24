@@ -1,9 +1,13 @@
 Weblate 4.10
--------------
+------------
 
 Not yet released.
 
 * Added support for formality with DeepL.
+* Bulk edit and search and replace are now available on project and language level.
+* Added filtering to search and replace.
+
+`All changes in detail <https://github.com/WeblateOrg/weblate/milestone/74?closed=1>`__.
 
 Weblate 4.9.1
 -------------
