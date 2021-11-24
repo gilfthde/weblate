@@ -550,23 +550,28 @@ class VCSGitHubTest(VCSGitUpstreamTest):
     def test_api_url_ghes(self):
         self.repo.component.repo = "https://self-hosted-ghes.com/WeblateOrg/test.git"
         self.assertEqual(
-            self.repo.get_api_url()[0], "https://self-hosted-ghes.com/api/v3/repos/WeblateOrg/test"
+            self.repo.get_api_url()[0],
+            "https://self-hosted-ghes.com/api/v3/repos/WeblateOrg/test"
         )
         self.repo.component.repo = "https://self-hosted-ghes.com/WeblateOrg/test"
         self.assertEqual(
-            self.repo.get_api_url()[0], "https://self-hosted-ghes.com/api/v3//repos/WeblateOrg/test"
+            self.repo.get_api_url()[0],
+            "https://self-hosted-ghes.com/api/v3//repos/WeblateOrg/test"
         )
         self.repo.component.repo = "https://self-hosted-ghes.com/WeblateOrg/test/"
         self.assertEqual(
-            self.repo.get_api_url()[0], "https://self-hosted-ghes.com/api/v3//repos/WeblateOrg/test"
+            self.repo.get_api_url()[0],
+            "https://self-hosted-ghes.com/api/v3//repos/WeblateOrg/test"
         )
         self.repo.component.repo = "git@self-hosted-ghes.com:WeblateOrg/test.git"
         self.assertEqual(
-            self.repo.get_api_url()[0], "https://self-hosted-ghes.com/api/v3//repos/WeblateOrg/test"
+            self.repo.get_api_url()[0],
+            "https://self-hosted-ghes.com/api/v3//repos/WeblateOrg/test"
         )
         self.repo.component.repo = "self-hosted-ghes.com:WeblateOrg/test.git"
         self.assertEqual(
-            self.repo.get_api_url()[0], "https://self-hosted-ghes.com/api/v3//repos/WeblateOrg/test"
+            self.repo.get_api_url()[0],
+            "https://self-hosted-ghes.com/api/v3//repos/WeblateOrg/test"
         )
         self.repo.component.repo = "self-hosted-ghes.com:WeblateOrg/test.github.io"
         self.assertEqual(
